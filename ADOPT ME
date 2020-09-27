@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap');
+        
+        
+        
+        body{
+           background-color: rgb(29, 21, 21);
+           font-family: 'Indie Flower';
+        }
+
+        .container{
+            
+            background: url(https://cdn.pixabay.com/photo/2018/09/30/21/59/animals-3714805_960_720.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 30px;
+            
+        }
+        form{
+            max-width: 600px;
+            background-color: white;
+            opacity: 0.95;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            width: 80%;
+            padding: 10px;
+        
+        }
+        header{
+            text-align: center; 
+            font-family: monospace;
+            color: white;
+        }
+        .labels{
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+            vertical-align: top;
+            margin-top: 20px;
+            }
+
+        .input-tab{
+            display: inline-block;
+            text-align: left;
+            width: 50%;
+            margin-left: 10px;
+        }
+
+        .input-field {
+            display: inline-block;
+            width: 100%;
+            padding: 5px;
+            margin-left: auto;
+            border: 1px solid;
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: bold;
+}
+
+        input {
+            margin: 6px;
+        }
+        ::-webkit-input-placeholder{
+            font-style: italic;
+        }
+        #dropdown {
+            width: 104%;
+            padding: 5px;
+            margin: 20px 0 10px 1px;  
+            border: 1px solid;
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 15px;
+            }
+            #dropdown1 {
+            width: 104%;
+            padding: 5px;
+            margin: 20px 0 10px 1px;  
+            border: 1px solid;
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 15px;
+            }
+            .buttons{
+                width: 100%;
+                text-align: center;
+                margin: 20px;
+                }
+            #submit{
+                width: 200px;
+                padding: 10px;
+                font-family: 'Ranchers';
+                background-color: orangered;
+                color: white;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            #submit:hover{
+                
+                background-color: rgb(175, 113, 33);
+            }
+            #comments{
+                margin-top: 20px;
+            }
+            #name, #email, #number{
+                margin-top: 15px;
+            }
+            footer{
+                text-align: center;
+                color: white;
+                font-size: 20px;
+            }
+            p{
+                font-family: 'Dancing Script';
+                font-size: 20px;
+                padding: 1px;
+            }
+            #title{
+                font-size: 100px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-family: 'Ranchers';
+            }
+           
+       
+
+    </style>
+</head>
+<body>
+  
+    <header>
+        <div>
+            <h1 id="title"><u>ADOPT ME!</u></h1>
+            <p id="description">What greater gift than the love of a cat.</p>
+            <p>(Charles Dickens)</p>
+        </div>
+    </header>
+      <div class="container">
+        <form id="survey-form" method="GET">
+            
+            <div class="labels">
+                <label id="name-label" >* Name </label></div> 
+            <div class="input-tab">
+                <input class="input-field" id="name" type="text" required name="name" placeholder="Name"></div>
+            <div class="labels">
+                <label for="email">* Email</label></div> 
+            <div class="input-tab">
+                <input id="email" class="input-field" type="email" required name="email" placeholder="Email"></div>
+            <div class="labels">
+                <label for="age">Age (optional)</label></div>
+            <div class="input-tab">
+                <input class="input-field" id="number" type="number" name="age" min="18" max="60" placeholder="Age"></div>
+           
+            
+            <div class="labels"><label for="drop" >Which option best describes your current role?</label></div>
+            <div class="input-tab">
+                <select id="dropdown" required name="dropdown">
+                <option disabled selected>Select current role</option>
+                <option>Student</option>
+                <option>Full time job</option>
+                <option>Part time job</option>
+                <option>Retired</option>
+                <option>Other</option></select></div>
+
+           <div class="labels">
+                <label>Are you a CAT PERSON?</label></div>
+                <div class="input-tab">
+                <input id="radio1" name="radio" class="radio" type="radio" checked value="definitely"> Definitely<br>
+                <input id="radio2" name="radio" class="radio" type="radio" value="maybe"> Maybe<br>
+                <input id="radio3" name="radio" class="radio" type="radio" value="not sure"> Not sure
+                </div>
+                <div class="labels">
+                    <label>How old do you want your cat to be?</div>
+                        <div class="input-tab">
+                            <select id="dropdown1" required name="dropdown">
+                                <option disabled selected>Select an option</option>
+                                <option>Up to 1 year</option>
+                                <option>More than 1 year</option>
+                                <option>Does not matter</option></select></div>
+                   
+                <div class="labels">
+                   <label>Choose the race</label></div>
+                    <div class="input-tab">
+                    <input name="race" type="checkbox" value="british shorthair"> British Shorthair<br>
+                    <input name="race" type="checkbox" value="american shorthair"> American Shorthair<br>
+                    <input name="race" type="checkbox" value="persian"> Persian<br>
+                    <input name="race" type="checkbox" value="ragdoll"> Ragdoll<br>
+                    <input name="race" type="checkbox" value="scottish fold"> Scottish Fold<br>
+                </div>
+                <div class="labels">
+                    <label>Any comments or special requests?</label></div>
+                    <div class="input-tab">
+                    <textarea class="input-field" rows="5" cols="40" id="comments" name="textarea" placeholder="Enter your comment here..."></textarea>
+                </div>
+                <div class="buttons" >
+                    <button id="submit" type="submit" value="Submit">ADOPT!</button>
+                </div>
+           
+        </form>
+    </div>
+    <footer><p>&copy 2020 Zaiid</p></footer>
+</body>
+</html>
